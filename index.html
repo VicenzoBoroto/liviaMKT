@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
+    <title>LiviaCarliniMKT</title>
+</head>
+<body>
+    <header>
+        <nav class="margem">
+            <div class="logo-header">
+                <img src="./img/logolivia-pequeno.png" alt="Logotipo">
+            </div> 
+            <ul>
+                <li><a href="#inicio" id="menu-inicio">Início</a></li>
+                <li><a href="#servicos" id="menu-servicos">Serviços</a></li>
+                <li><a href="#sobre" id="menu-sobre">Sobre</a></li>
+                <li><a href="#contato" id="menu-contato">Contato</a></li>
+            </ul>
+            <a href="./" class="botao-nav">Agendar reunião</a>
+            <button><img src="./img/menu-mobile.svg" alt="" class="menu-mobile"></button>   
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div class="margem">
+            <div class="intro">
+                <div class="conteudo">
+                    <span class="span">BOAS-VINDAS AO MEU SITE 👋</span>
+                    <h1 class="titulo1">Consultorias e serviços para o engajamento das suas redes sociais</h1>
+                    <p class="paragrafo">Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura a longo prazo.</p>
+                    <a href="./" class="botao"><img src="./img/whatsapp.svg" alt=""> Agendar reunião</a>
+                </div>
+                <div class="foto">
+                    <img src="./img/fotolivia.png" alt="Moça sorrindo">
+                </div>
+            </div>
+            <div class="numeros">
+                <ul>
+                    <li>
+                        <p>+3500</p>
+                        <span>Pacientes atendidos</span>
+                    </li>
+                    <li>
+                        <p>+15</p>
+                        <span>Especialista disponíveis</span>
+                    </li>
+                    <li>
+                        <p>+10</p>
+                        <span>Anos no mercado</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="margem fundo">
+            <div class="servicos-titulo">
+                <span class="span">SERVIÇOS</span>
+                <h2 class="titulo2">Como podemos ajudá-lo a se destacar no digital?</h2>
+            </div>
+            <div class="servicos-grid">
+                <div>
+                    <img src="./img/Group 2.svg" alt="">
+                    <h3>Ebook - Como se destacar no digital</h3>
+                    <p class="paragrafo">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+                </div>
+                <div>
+                    <img src="./img/Group 2.svg" alt="">
+                    <h3>Templates de posts para Instagram</h3>
+                    <p class="paragrafo">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+                </div>
+                <div>
+                    <img src="./img/Group 2.svg" alt="">
+                    <h3>Consultoria especializada</h3>
+                    <p class="paragrafo">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="sobre">
+        <div class="margem fundo">
+            <div class="imagem-sobre">
+                <img src="./img/image-sobre.png" alt="Pessoas trabalhando">
+            </div>
+            <div class="sobre-conteudo">
+                <span class="span">SOBRE NÓS</span>
+                <h2 class="titulo2">Entenda quem somos e por que existimos</h2>
+                <p class="paragrafo">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+            </div> 
+        </div>
+        
+    </section>
+
+    <section id="contato">
+        <div class="margem fundo">
+            <div class="conteudo-contato">
+                <h2 class="titulo2">Entre em contato com a gente!</h2>
+                <div class="contatos">
+                    <a href="./" class="paragrafo mapa"><img src="./img/map-pin.svg" alt="">R. Amauri Souza, 346</a>
+                    <a href="./" class="paragrafo email"><img src="./img/mail.svg" alt="">contato@beautysalon.com</a>
+                </div>
+                <a href="./" class="botao"><img src="./img/whatsapp.svg" alt=""> Agendar reunião</a>
+            </div>
+            <div id="map"></div>  
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="rodape margem">
+            <div class="direitos">
+                <div class="logo-footer">
+                    <img src="./img/logolivia-grande.png" alt="Logotipo">
+                </div>    
+                <p>©2022 - LiviaCarliniMKT.</p>
+                <p>Todos os direitos reservados.</p>
+            </div>
+    
+            <div class="redes">
+                <a href="./"><img src="./img/instagram.svg" alt="Instagram"></a>
+                <a href="./"><img src="./img/facebook.svg" alt="Facebook"></a>
+                <a href="./"><img src="./img/youtube.svg" alt="Youtube"></a>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

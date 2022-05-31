@@ -1,0 +1,97 @@
+header {
+    background-color: var(--brand-green-light);
+    height: 7.2rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 9999;
+}
+
+header .menu-mobile {
+    display: none;
+}
+
+header nav ul {
+    display: flex;
+    gap: 3.2rem;
+    height: 7.2rem;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    height: 7.2rem;
+    align-items: center;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-size: 1.6rem;
+    color: var(--brand-green);
+    max-width: 1366px;
+}
+
+header nav ul a{
+    font-weight: 400;
+    opacity: 0.4;
+}
+
+nav a {
+    color: var(--brand-green);
+    position: relative;
+}
+
+nav ul a::after {
+    content: "";
+    display: block;
+    height: 0.2rem;
+    width: 0%;
+    background-color: var(--brand-green);
+    position: absolute;
+    bottom: -2.5rem
+}
+
+nav ul a:hover::after {
+    content: "";
+    display: block;
+    height: 0.2rem;
+    transition: 0.2s;
+    width: 100%;
+    background-color: var(--brand-green);
+}
+
+nav ul a:hover {
+    opacity: 1;
+}
+
+.logo-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.logo-header {
+    width: 20rem;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+}
+
+@media (max-width: 1100px) {
+    nav .botao-nav {
+        display: none;
+    }
+
+}
+
+@media (max-width: 820px) {
+    header nav ul, header nav a {
+        display: none;
+    }
+    header nav .menu-mobile {
+        display: inline;
+    }
+    .logo-header {
+        width: 12rem;
+    }
+}
