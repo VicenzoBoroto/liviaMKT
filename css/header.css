@@ -72,9 +72,10 @@ nav ul a:hover {
     width: 20rem;
 }
 
-nav button {
+nav #btn-mobile {
     background-color: transparent;
     border: none;
+    outline: 1px solid var(--brand-beige);
 }
 
 @media (max-width: 1100px) {
@@ -119,5 +120,8 @@ nav button {
     }
     nav ul a:hover::after {
         display: none;
+    }
+    nav #btn-mobile {
+        outline: none;
     }
 }
