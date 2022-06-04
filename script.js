@@ -1,10 +1,10 @@
-
-var navbar = document.querySelector("header");
-var inicio = document.getElementById("menu-inicio")
-var servicos = document.getElementById("menu-servicos")
-var sobre = document.getElementById("menu-sobre")
-var contato = document.getElementById("menu-contato")
+const nav = document.getElementById("nav")
+var navbar = document.querySelector("header")
+var navegacaoLinks = document.querySelectorAll("#menu-list a")
 var botao = document.querySelector(".botao-nav")
+var menuList = document.getElementById("menu-list")
+var menuListBorder = document.querySelectorAll("#menu-list li")
+var imgBtnMobile = document.querySelector(".menu-mobile")
 
 
 //Scroll suave ao clicar em algum botão do menu
@@ -34,35 +34,35 @@ function smoothScroll() {
 smoothScroll()
 
 
-// Header muda de cor ao scrollar
+// Header muda de cor ao scroll
 
 document.addEventListener("scroll", function() {
     var posicaoY = window.pageYOffset
     if (posicaoY == 0) {
         navbar.style.backgroundColor = "#fad2e1";
-        inicio.style.color = "#910D3F";
-        servicos.style.color = "#910D3F";
-        sobre.style.color = "#910D3F";
-        contato.style.color = "#910D3F";
-        inicio.classList.remove("after");
-        servicos.classList.remove("after");
-        sobre.classList.remove("after");
-        contato.classList.remove("after");
         botao.style.borderColor = "#910D3F";
         botao.style.color = "#910D3F"
+        menuList.style.backgroundColor = "#fad2e1"
+        menuListBorder.forEach(element => {
+            element.style.borderColor = "#910D3F"
+        })
+        navegacaoLinks.forEach(element => {
+            element.style.color = "#910D3F"
+            element.classList.remove("after")
+        })
 
     } else {
         navbar.style.backgroundColor = "#910D3F";
-        inicio.style.color = "#ffffff";
-        servicos.style.color = "#ffffff";
-        sobre.style.color = "#ffffff";
-        contato.style.color = "#ffffff";
-        inicio.classList.add("after");
-        servicos.classList.add("after");
-        sobre.classList.add("after");
-        contato.classList.add("after");
         botao.style.borderColor = "#ffffff";
         botao.style.color = "#ffffff"
+        menuList.style.backgroundColor = "#910D3F"   
+        menuListBorder.forEach(element => {
+            element.style.borderColor = "#fad2e1";
+        })
+        navegacaoLinks.forEach(element => {
+            element.style.color = "#ffffff"
+            element.classList.add("after")
+        })
     }
 })
 
@@ -78,7 +78,35 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 var marker = L.marker([-20.368779, -40.319540]).addTo(map);
 
+//Abrir menu mobile
 
+const btnMobile = document.getElementById("btn-mobile");
+
+function toggleMenu() {
+    nav.classList.toggle("active")
+    imgBtnMobile.classList.toggle("active")
+    if (imgBtnMobile.classList == "menu-mobile") {
+        imgBtnMobile.setAttribute("src","./img/menu-mobile.svg")
+    } else if (imgBtnMobile.classList == "menu-mobile active") {
+        imgBtnMobile.setAttribute("src","./img/Close.svg")
+    }
+}
+
+btnMobile.addEventListener("click", toggleMenu)
+
+function closeMenu() {
+    nav.classList.remove("active")
+    imgBtnMobile.classList.remove("active")
+    if (imgBtnMobile.classList == "menu-mobile") {
+        imgBtnMobile.setAttribute("src","./img/menu-mobile.svg")
+    } else if (imgBtnMobile.classList == "menu-mobile active") {
+        imgBtnMobile.setAttribute("src","./img/Close.svg")
+    }
+}
+
+navegacaoLinks.forEach(element => {
+    element.addEventListener("click", closeMenu)
+})
 
 
 
